@@ -1,0 +1,27 @@
+<div class="container">
+    <h2 class="title">Supplier List</h2>
+    <a routerLink="/suppliers/add" class="btn">+ Add Supplier</a>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let supplier of suppliers">
+          <td>{{ supplier.name }}</td>
+          <td>{{ supplier.email }}</td>
+          <td>{{ supplier.phone }}</td>
+          <td>
+            <a [routerLink]="['/suppliers/edit', supplier.id]" class="btn small">Edit</a>
+            <button (click)="deleteSupplier(supplier.id!)" class="btn small danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

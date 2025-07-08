@@ -1,1 +1,79 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+    background-color: #ec4899;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .btn:hover {
+    background-color: #db2777;
+  }
+  
+  .btn.secondary {
+    background-color: #6b7280;
+  }
+  
+  .btn.secondary:hover {
+    background-color: #4b5563;
+  }
+  
+  .btn.small {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .btn.danger {
+    background-color: #ef4444;
+  }
+  
+  .btn.danger:hover {
+    background-color: #dc2626;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  form input {
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    width: 100%;
+  }
+  

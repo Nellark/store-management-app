@@ -1,0 +1,55 @@
+<div class="container">
+    <h1 class="title">Store Management Dashboard</h1>
+  
+    <!-- Toggle Buttons -->
+    <div class="btn-group">
+      <button (click)="toggleSuppliers()" class="btn">View Suppliers</button>
+      <button (click)="toggleProducts()" class="btn">View Products</button>
+    </div>
+  
+    <!-- Add Buttons -->
+    <div class="btn-group">
+      <a routerLink="/suppliers" class="btn secondary">+ Add Supplier</a>
+      <a routerLink="/products" class="btn secondary">+ Add Product</a>
+    </div>
+  
+    <!-- Supplier Table -->
+    <div *ngIf="showSuppliers">
+      <h2>Suppliers</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th><th>Email</th><th>Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of suppliers">
+            <td>{{ s.name }}</td>
+            <td>{{ s.email }}</td>
+            <td>{{ s.phone }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Product Table -->
+    <div *ngIf="showProducts">
+      <h2>Products</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th><th>Price</th><th>Quantity</th><th>Supplier ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of products">
+            <td>{{ p.name }}</td>
+            <td>{{ p.price }}</td>
+            <td>{{ p.quantity }}</td>
+            <td>{{ p.supplierId }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
